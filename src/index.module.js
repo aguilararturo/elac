@@ -12,7 +12,8 @@
             'ngMap',
             'angularMoment',
             'vcRecaptcha',
-            'ElacApp.Storage'
+            'ElacApp.Storage',
+            'ElacApp.Templates'
         ]);
 
     angular.module('ElacApp').config(['$locationProvider', function ($locationProvider) {

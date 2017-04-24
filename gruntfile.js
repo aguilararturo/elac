@@ -206,7 +206,7 @@ module.exports = function (grunt) {
                         dest: '<%= compile_dir %>/src/',
                         cwd: '<%= build_dir %>/src/',
                         expand: true
-                    },					
+                    },
                     {
                         src: [ 'bootstrap/*' ],
                         dest: '<%= compile_dir %>/fonts/',
@@ -282,7 +282,7 @@ module.exports = function (grunt) {
                     sourceMapIncludeSources: true,
                     sourceMapIn: '<%= concat.compile_scripts.dest %>' + '.map'
                 }
-            }
+                }
         },
 
         // sass
@@ -318,10 +318,10 @@ module.exports = function (grunt) {
             app: {
                 options: {
                     base: 'src',
-                    module: 'EasyBikeApp.Templates'
+                    module: 'ElacApp.Templates'
                 },
                 src: [ '<%= files.templates %>' ],
-                dest: '<%= build_dir %>/EasyBikeApp.<%= buildNumber %>.js'
+                dest: '<%= build_dir %>/ElacApp.<%= buildNumber %>.js'
             }
         },
 

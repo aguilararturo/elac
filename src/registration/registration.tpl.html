@@ -1,0 +1,46 @@
+<div class="col-md-6 col-xs-12 col-md-offset-3">
+    <h2>Registro de Asistencia</h2>
+    <form name="form" ng-submit="regCtrl.register()" role="form">
+        <div class="form-group" ng-class="{ 'has-error': form.firstName.$dirty && form.firstName.$error.required }">
+            <label for="username">Nombres</label>
+            <input type="text" name="firstName" id="firstName" class="form-control" ng-model="regCtrl.data.firstName" required />
+            <span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">El Nombre es requerido</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.lastName.$dirty && form.lastName.$error.required }">
+            <label for="username">Apellidos</label>
+            <input type="text" name="lastName" id="Text1" class="form-control" ng-model="regCtrl.data.lastName" required />
+            <span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">Apellidos es requerido</span>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.country.$dirty && form.country.$error.required }">
+            <label for="username">Apellidos</label>
+            <country-select data-ng-model="regCtrl.countryData"></country-select>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.passport.$dirty && form.passport.$error.required }">
+            <label for="username">N. de pasaporte / DNI</label>
+            <input type="text" name="passport" id="Text2" class="form-control" ng-model="regCtrl.data.passport" required />
+            <span ng-show="form.passport.$dirty && form.passport.$error.required" class="help-block">Pasaporte es requerido</span>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error': form.alergies.$dirty && form.alergies.$error.required }">
+            <label for="username">alergies</label>
+            <input type="text" name="alergies" id="Text3" class="form-control" ng-model="regCtrl.data.alergies" />
+            <span ng-show="form.alergies.$dirty && form.alergies.$error.required" class="help-block">alergias</span>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error': form.email.$dirty && form.email.$error.required }">
+            <label for="username">Email</label>
+            <input type="text" name="email" id="Text4" class="form-control" ng-model="regCtrl.data.email" required />
+            <span ng-show="form.email.$dirty && form.email.$error.required" class="help-block">email es requerido</span>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error': form.email.$dirty && form.email.$error.required }">
+            <country-select cs-required></country-select>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" ng-disabled="form.$invalid || regCtrl.dataLoading" class="btn btn-primary">Registrar</button>
+            <a href="#!/login" class="btn btn-link">Cancel</a>
+        </div>
+
+    </form>
+</div>
