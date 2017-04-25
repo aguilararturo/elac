@@ -168,6 +168,12 @@ module.exports = function (grunt) {
                         dest: '<%= build_dir %>/',
                         cwd: '.',
                         expand: true
+                    },
+					{
+                        src: [ 'node_modules/world-flags-sprite/images/*' ],
+                        dest: '<%= build_dir %>/',
+                        cwd: '.',
+                        expand: true
                     }
                 ]
             },

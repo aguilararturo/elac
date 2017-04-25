@@ -6,7 +6,8 @@ module.exports = {
     files: {
         scripts: [
             'src/**/*.module.js',
-            'src/**/*.js'
+            'src/**/*.js',
+			'src/**/*.json'
         ],
         jsDocScripts: [
             'src'
@@ -48,14 +49,19 @@ module.exports = {
 			'node_modules/ngmap/build/scripts/ng-map.min.js',
 			'node_modules/croppie/croppie.js',
 			'node_modules/angular-wizard/dist/angular-wizard.min.js',			
-			'node_modules/angular-moment/angular-moment.js'
+			'node_modules/angular-moment/angular-moment.js',
+			'node_modules/angular-moment/locales.min.js',
+			'node_modules/humanize-duration/humanize-duration.js',
+			'node_modules/angular-timer/dist/angular-timer.min.js',
+			'node_modules/angular-countries/dist/js/ngCountries.js'
         ],
         styles: [
             'node_modules/angular-carousel/dist/angular-carousel.min.css',
             'node_modules/angularjs-slider/dist/rzslider.min.css',
             'node_modules/EasyZoom/css/easyzoom.css',
 			'node_modules/croppie/croppie.css',
-			'node_modules/angular-wizard/dist/angular-wizard.min.css'
+			'node_modules/angular-wizard/dist/angular-wizard.min.css',
+			'node_modules/world-flags-sprite/stylesheets/flags32.css'
         ],
         js_map: [
             'node_modules/angular/angular.min.js.map'

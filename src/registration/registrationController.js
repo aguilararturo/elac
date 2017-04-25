@@ -3,7 +3,7 @@
 
     function RegistrationController($rootScope, $state) {
         var regCtrl = this;
-        regCtrl.countryData = {};
+        regCtrl.selectedCountry = {};
     }
 
     angular.module('ElacApp')

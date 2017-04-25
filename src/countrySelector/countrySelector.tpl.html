@@ -1,0 +1,10 @@
+<div class="btn-group drop-down-custom country-container" uib-dropdown is-open="status.isopen">
+    <button id="single-button" type="button" class="btn btn-primary country-container f32" uib-dropdown-toggle>
+        <i class="flag {{selCountryCtrl.selectedCountry.alpha2}}"></i>
+        <span class="drop-item" ng-bind="selCountryCtrl.selectedCountry.name"></span>
+        <i class="fa fa-sort-desc"></i>
+      </button>
+    <ul class="dropdown-menu scrollable-menu f32" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+        <li role="menuitem" ng-repeat="country in selCountryCtrl.countries" ng-click="selCountryCtrl.selectCountry(country)"> <i class="flag" ng-class="country.alpha2"></i><span class="drop-item" ng-bind="country.name"></span></li>
+    </ul>
+</div>

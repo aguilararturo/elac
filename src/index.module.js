@@ -12,6 +12,8 @@
             'ngMap',
             'angularMoment',
             'vcRecaptcha',
+            'ngCountries',
+            'timer',
             'ElacApp.Storage',
             'ElacApp.Templates'
         ]);
