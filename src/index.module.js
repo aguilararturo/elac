@@ -14,6 +14,11 @@
             'vcRecaptcha',
             'ngCountries',
             'timer',
+            "ngMaterial",
+            "ngAnimate",
+            "ngAria",
+            "ngMessages",
+            "mdPickers",
             'ElacApp.Storage',
             'ElacApp.Templates'
         ]);

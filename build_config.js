@@ -25,10 +25,12 @@ module.exports = {
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/lodash/lodash.min.js',            
 			'node_modules/bootstrap/dist/js/bootstrap.min.js',
+			'node_modules/jquery.scrollto/jquery.scrollto.js',
+			'node_modules/smooth-scroll/dist/js/smooth-scroll.min.js',
 			'node_modules/moment/min/moment.min.js',
             'node_modules/angular/angular.min.js',
             'node_modules/angular-sanitize/angular-sanitize.min.js',
-            'node_modules/angular-animate/angular-animate.min.js',
+            'node_modules/angular-animate/angular-animate.min.js',			
             'node_modules/angular-ui-router/release/angular-ui-router.min.js',
             'node_modules/angular-messages/angular-messages.min.js',
             'node_modules/angular-mocks/angular-mocks.js',
@@ -53,7 +55,15 @@ module.exports = {
 			'node_modules/angular-moment/locales.min.js',
 			'node_modules/humanize-duration/humanize-duration.js',
 			'node_modules/angular-timer/dist/angular-timer.min.js',
-			'node_modules/angular-countries/dist/js/ngCountries.js'
+			'node_modules/angular-aria/angular-aria.js',
+			'node_modules/angular-messages/angular-messages.min.js',
+			'node_modules/angular-mocks/angular-mocks.js',			
+			'node_modules/angular-material/angular-material.js',
+			'node_modules/angular-countries/dist/js/ngCountries.js',
+			'node_modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js',
+			'node_modules/mdPickers/dist/mdPickers.min.js'
+			
+			
         ],
         styles: [
             'node_modules/angular-carousel/dist/angular-carousel.min.css',
@@ -61,7 +71,10 @@ module.exports = {
             'node_modules/EasyZoom/css/easyzoom.css',
 			'node_modules/croppie/croppie.css',
 			'node_modules/angular-wizard/dist/angular-wizard.min.css',
-			'node_modules/world-flags-sprite/stylesheets/flags32.css'
+			'node_modules/world-flags-sprite/stylesheets/flags32.css',
+			'node_modules/angular-material/angular-material.css',
+			'node_modules/mdPickers/dist/mdPickers.min.css'
+			
         ],
         js_map: [
             'node_modules/angular/angular.min.js.map'

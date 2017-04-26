@@ -1,7 +1,6 @@
 (function () {
     'use strict';
-
-    function homeController($rootScope, $state, $location, $anchorScroll, $document, _, $window) {
+    function homeController($rootScope, $state, $document, _, $window) {
         var homeCtrl = this;
 
         homeCtrl.endTime = '9 August 2017 12:00:00';

@@ -16,7 +16,6 @@
             templateUrl: 'registration/registration.tpl.html',
         });
     }
-
     angular
         .module('ElacApp')
         .config(CartConfig);

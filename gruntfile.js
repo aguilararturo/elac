@@ -174,6 +174,12 @@ module.exports = function (grunt) {
                         dest: '<%= build_dir %>/',
                         cwd: '.',
                         expand: true
+                    },
+					{
+                        src: [ 'src/utils/*' ],
+                        dest: '<%= build_dir %>/',
+                        cwd: '.',
+                        expand: true
                     }
                 ]
             },
@@ -223,6 +229,24 @@ module.exports = function (grunt) {
                         src: [ '*' ],
                         dest: '<%= compile_dir %>/fonts/',
                         cwd: '<%= node_modules.font_awesome_assets %>/',
+                        expand: true
+                    },
+                    {
+                        src: ['**/*'],
+                        dest: '<%= compile_dir %>/images/',
+                        cwd: '<%= build_dir %>/images/',
+                        expand: true
+                    },
+                    {
+                        src: ['css/*'],
+                        dest: '<%= compile_dir %>/',
+                        cwd: '<%= build_dir %>/',
+                        expand: true
+                    },
+					{
+                        src: [ 'src/utils/*' ],
+                        dest: '<%= compile_dir %>/',
+                        cwd: '.',
                         expand: true
                     }
                 ]

@@ -1,7 +1,7 @@
-@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap.scss';
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap.scss";
 @import "../node_modules/font-awesome/scss/font-awesome";
-@import 'countrySelector/countrySelector';
-@import 'registration/registration';
+@import "countrySelector/countrySelector";
+@import "registration/registration";
 
 
 .no-padding {
@@ -795,8 +795,8 @@ h2 {
 
 .body-content {
   padding-top: 65px;
-  background-color: #1881a2;
-  background-image: url("../images/sponsor-bg.png");
+  background-color: #c1c3c4;
+  background-image: url("../images/body-bg.png");
   background-position:50% 0;
   background-size: cover;
   background-repeat:no-repeat;

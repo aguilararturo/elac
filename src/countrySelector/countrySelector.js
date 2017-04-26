@@ -1,6 +1,6 @@
 (function () {
-    'use strict'
-
+    'use strict';
+    /* @ngInject */
     function SelectedCountryController($http) {
         var selCountryCtrl = this;
         function mapData(item) {
@@ -11,7 +11,7 @@
         function $onInit() {
             selCountryCtrl.countries = [];
             selCountryCtrl.selectedCountry2 = {};
-            $http.get('/src/utils/slim-2.json')
+            $http.get('src/utils/slim-2.txt')
                 .then(function (results) {
                     selCountryCtrl.countries = _.map(results.data, mapData);
                     selCountryCtrl.selectedCountry = selCountryCtrl.countries[0];

@@ -8,9 +8,13 @@
      * @author Arturo Aguilar
      * @desc Website Level Configuration
      */
-    elacApp.config(function (browserStorageProvider, BROWSER_STORAGE_SPECIFICATION) {
+    elacApp.config(function (browserStorageProvider, BROWSER_STORAGE_SPECIFICATION,  $urlRouterProvider) {
         browserStorageProvider.useService(BROWSER_STORAGE_SPECIFICATION.COOKIES.serviceName);
         browserStorageProvider.mapServiceMethods(BROWSER_STORAGE_SPECIFICATION.COOKIES.methodsMapping);
+        $urlRouterProvider.otherwise(function ($injector) {
+            var $state = $injector.get('$state');
+            $state.go('home');
+        });
     });
 
     /**
@@ -22,6 +26,8 @@
     elacApp.run(function ($rootScope, $window) {
         $rootScope.headerClass = '';
         $rootScope.contentClass = '';
+        console.log('app is running');
+
         function stateChangeSuccess(event, toState, toParams, fromState, fromParams) {
             var w = angular.element($window);
             $rootScope.otherState = false;

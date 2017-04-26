@@ -1,6 +1,7 @@
 
 (function () {
     'use strict';
+    /* @ngInject */
     function HomeConfig($stateProvider) {
         $stateProvider.state('home', {
             url: '/home?da',
