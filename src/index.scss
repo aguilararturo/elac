@@ -40,7 +40,8 @@
 body {
   font-family: 'Dosis', sans-serif;
   font-size: 17px;
-  color: #fff
+  color: #fff;
+  overflow-x: hidden;
 }
 
 
@@ -787,7 +788,6 @@ h2 {
 #footer a:hover {
   color:#1B7B98
 }
-
 
 #reg-section {
   background-color: blue;
