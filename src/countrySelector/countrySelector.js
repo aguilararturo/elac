@@ -10,13 +10,22 @@
 
         function $onInit() {
             selCountryCtrl.countries = [];
-            selCountryCtrl.selectedCountry2 = {};
+            function loadGeo(data) {
+                var countryName = _.lowerCase(data.data.country);
+                _.forEach(selCountryCtrl.countries, function search(country) {
+                    if (country.alpha2 === countryName) {
+                        selCountryCtrl.selectedCountry = country;
+                        return;
+                    }
+                });
+            }
             $http.get('src/utils/slim-2.txt')
                 .then(function (results) {
                     selCountryCtrl.countries = _.map(results.data, mapData);
                     selCountryCtrl.selectedCountry = selCountryCtrl.countries[0];
-                    console.log('countries', selCountryCtrl.countries);
-                    console.log('selected', selCountryCtrl.selectedCountry);
+
+                    $http.get('http://ipinfo.io/json')
+                        .then(loadGeo);
                 });
 
         }

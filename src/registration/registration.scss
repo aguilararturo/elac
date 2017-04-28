@@ -1,7 +1,23 @@
+.color-reg {
+    color: white;
+}
 .reg-container {
     margin-right: 0px;
     margin-left: 0px;
-    color: black;
+    @extend .color-reg;
+
+    legend {
+        @extend .color-reg;
+    }
+    label {
+        @extend .color-reg;
+    }
+    input {
+        @extend .color-reg;
+    }
+    md-icon {
+        @extend .color-reg;
+    }
 }
 
 .radio-custom {
