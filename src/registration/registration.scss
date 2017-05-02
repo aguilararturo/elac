@@ -13,7 +13,7 @@
         @extend .color-reg;
     }
     input {
-        @extend .color-reg;
+        color: black;
     }
     md-icon {
         @extend .color-reg;
@@ -26,4 +26,25 @@
 
 .calendar-btn {
     padding: 2px 15px !important;
+}
+
+.my-datepicker {
+    padding-top: 55px;
+}
+
+/* xs */
+@media (max-width: 767px) {
+    .my-datepicker {
+        padding-top: 0px;
+        .btn {
+            padding: 5px 10px;
+        }
+    }
+}
+
+/* sm */
+@media (min-width: 768px) and (max-width: 991px) {
+    .my-datepicker {
+        padding-top: 0px;
+    }
 }

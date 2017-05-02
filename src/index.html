@@ -7,16 +7,14 @@
 	<meta name="author" content="">
 	<title>Elac Bolivia 2017</title>
 
-	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/animate.css" rel="stylesheet">
-	<link href="css/responsive.css" rel="stylesheet">
 
 	<!-- compiled CSS -->
 	<% styles.forEach( function ( file ) { %>
 		<link rel="stylesheet" type="text/css" href="<%= file %>" />
 		<% }); %>
-
+<link href="css/responsive.css" rel="stylesheet">
 			<!-- compiled JavaScript -->
 			<% scripts.forEach( function ( file ) { %>
 				<script type="text/javascript" src="<%= file %>"></script>
@@ -43,44 +41,7 @@
 
 <body>
 	<header id="header" role="banner">
-		<div class="main-nav" id="headerNav">
-			<div class="container">
-				<div class="header-top">
-					<div class="pull-right social-icons">
-						<a href="https://twitter.com/elacbolivia" class="twitter-follow-button" data-show-count="false">Follow @elacbolivia</a>
-						<script
-						 async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-							<a href="https://twitter.com/elacbolivia" target="_blank"><i class="fa fa-twitter"></i></a>
-							<a href="https://www.instagram.com/elacbolivia" target="_blank"><i class="fa fa-instagram"></i></a>
-							<a href="https://www.facebook.com/ElacBolivia" target="_blank"><i class="fa fa-facebook"></i></a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
-		                    <span class="sr-only">Toggle navigation</span>
-		                    <span class="icon-bar"></span>
-		                    <span class="icon-bar"></span>
-		                    <span class="icon-bar"></span>
-		                </button>
-						<a class="navbar-brand" href="index.html">
-							<img class="img-responsive" src="images/logo.png" alt="logo">
-						</a>
-					</div>
-					<div class="collapse navbar-collapse" id="navigationbar">
-						<ul class="nav navbar-nav navbar-right custom-navbar">
-							<li class="scroll active"><a href="#/home">Inicio</a></li>
-							<li class="scroll"><a href="#/home?da=explore">Explorar</a></li>
-							<li class="scroll"><a href="#/home?da=event">Asistentes</a></li>
-							<li class="scroll"><a href="#/home?da=about">Acerca</a></li>
-							<li class="scroll"><a href="#/home?da=hotel">Hotel</a></li>
-							<li class="scroll"><a href="#/registration">Registrate</a></li>
-							<li class="scroll"><a href="#/home?da=contact">Contacto</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+		<elac-menu></elac-menu>
 	</header>
 	<!--/#header-->
 	<section id="newReg">

@@ -62,13 +62,13 @@
                 <div class="col-md-6 col-sx-12">
                     <label for="arrive">Fecha de arribo:</label>
 
-
-<p class="input-group">
-          <input type="text" class="form-control" uib-datepicker-popup ng-model="regCtrl.data.arriveDate" is-open="regCtrl.arriveOpen" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
-          <span class="input-group-btn">
-            <button type="button" class="btn btn-default" ng-click="regCtrl.arriveOpen = !regCtrl.arriveOpen"><i class="fa fa-calendar"></i></button>
-          </span>
-        </p>
+                    <p class="input-group my-datepicker">
+                        <input type="text" class="form-control" uib-datepicker-popup ng-model="regCtrl.data.arriveDate" is-open="regCtrl.arriveOpen"
+                            datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default calendar-btn" ng-click="regCtrl.arriveOpen = !regCtrl.arriveOpen"><i class="fa fa-calendar"></i></button>
+                        </span>
+                    </p>
 
                 </div>
                 <div class="col-md-6 col-sx-12">
@@ -90,16 +90,17 @@
             <div class="form-group" ng-class="{ 'has-error': form.departure.$dirty && form.departure.$error.required }">
                 <div class="col-md-6 col-sx-12">
                     <label for="departure">Fecha de partida:</label>
-                    <mdp-date-picker mdp-open-on-click required name="dateFormat" mdp-placeholder="(dd/mm/yyyy)" mdp-format="DD/MM/YYYY" ng-model="regCtrl.data.departureDate">
-                        <div ng-messages="form.departure.$error">
-                            <div ng-message="required">Fecha de partida requerida</div>
-                            <div ng-message="format">Formato invalido</div>
-                        </div>
-                    </mdp-date-picker>
+                    <p class="input-group my-datepicker">
+                        <input type="text" class="form-control" uib-datepicker-popup ng-model="regCtrl.data.departureDate" is-open="regCtrl.departureOpened"
+                            datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default calendar-btn" ng-click="regCtrl.departureOpened = !regCtrl.departureOpened"><i class="fa fa-calendar"></i></button>
+                        </span>
+                    </p>
                 </div>
                 <div class="col-md-6 col-sx-12">
                     <label for="departure">Hora de partida:</label>
-                    <mdp-time-picker mdp-open-on-click mdp-auto-switch="true" ng-model="regCtrl.data.departureTime"></mdp-time-picker>
+                    <div uib-timepicker ng-model="regCtrl.data.departureTime" show-meridian="true"></div>
                 </div>
                 <div class="col-md-6 col-sx-12">
                     <label for="departureCompany">Línea Aérea:</label>
