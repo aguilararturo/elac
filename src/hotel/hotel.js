@@ -1,5 +1,6 @@
 (function () {
     'use strict';
+    /* @ngInject */
     function HotelController(_) {
         var hotelCtrl = this;
 

@@ -31,7 +31,7 @@
             var access_token = response.authResponse.accessToken;
             var user_id = response.authResponse.userID;
             FB.api('/me?fields=id, first_name,last_name', function (responseMe) {
-                console.log('me fields request', responseMe);
+              //  console.log('me fields request', responseMe);
                 resolve(null, responseMe, deferred);
             });
         }
@@ -40,7 +40,7 @@
             var deferred = $q.defer();
 
             function onLogin(response) {
-                console.log('login response');
+              //  console.log('login response');
                 if (response.status == 'connected') {
                     getMeData(response, deferred);
                 } else if (response.status == 'not_authorized') {
@@ -52,6 +52,8 @@
                             resolve(response.error, null, deferred);
                         }
                     });
+                } else if(response.status == 'unknown') {
+                     deferred.reject('not logged');
                 }
             }
 

@@ -60,7 +60,6 @@
 
             if (toState.name === 'home') {
                 $rootScope.contentClass = '';
-                console.log('params', toParams);
                 $rootScope.otherState = false;
                 header.removeClass('fixed-menu animated slideInDown');
             } else {

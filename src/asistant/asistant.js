@@ -1,5 +1,6 @@
 (function () {
     'use strict';
+    /* @ngInject */
     function AsistantController(_, RegService) {
         var asistantCtrl = this;
         function loadAsistants(response) {
@@ -7,6 +8,7 @@
                 asistant.image = '//graph.facebook.com/' + asistant.userId + '/picture?type=large';
                 return asistant;
             }
+
             var id = -1;
             function addIds(item) {
                 id++;
@@ -16,7 +18,6 @@
                 };
             }
             asistantCtrl.carouselItems = _.map(_.chunk(_.map(response, addImage), 3), addIds);
-            console.log('asistant', response);
         }
 
         function $onInit() {

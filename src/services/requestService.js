@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-
+/* @ngInject */
     function requestService($log, $q, $cacheFactory, _) {
         /**
         * @function successfullRequest

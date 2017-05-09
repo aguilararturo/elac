@@ -1,0 +1,19 @@
+<div class="col-sm-10">
+  <label class="bolivia-title">
+    <span>Bolivia</span>
+    <span class="visible-xs" ng-bind="boliviaCtrl.slides[boliviaCtrl.active].title"></span>
+  </label>
+</div>
+<div class="hotel-container">
+  <div uib-carousel interval="boliviaCtrl.myInterval" active="boliviaCtrl.active" no-wrap="boliviaCtrl.noWrapSlides">
+    <div uib-slide ng-repeat="slide in boliviaCtrl.slides track by slide.id" index="slide.id">
+      <img ng-src="{{slide.image}}" class="img-responsive hotel-img">
+      <div class="carousel-caption">
+        <h3 class="hotel-title hidden-xs">{{slide.title}}</h3>
+        <a class="hotel-link hidden-xs" target="_blank" href="{{slide.url}}">Conocer mas...</a>
+        <br>
+      </div>
+    </div>
+  </div>
+  <a class="hotel-link visible-xs" target="_blank" href="{{boliviaCtrl.slides[boliviaCtrl.active].url}}">Conocer mas...</a>
+</div>

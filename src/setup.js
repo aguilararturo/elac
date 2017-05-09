@@ -23,7 +23,6 @@
 
             document.title = 'Elac Bolivia 2017';
             angular.bootstrap(document.body, ['ElacApp']);
-            console.log('app is running');
         }
 
         loadAppAndConfiguration();

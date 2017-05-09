@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-
+/* @ngInject */
     function RegistrationController($rootScope, $state, _, Facebook, $window, RegService, $filter) {
         var regCtrl = this;
 
@@ -47,10 +47,12 @@
             var elacUser = _.clone(regCtrl.data);
             elacUser.departureDate = $filter('date')(regCtrl.data.departureDate, 'yyyy-MM-dd HH:mm:ss Z');
             elacUser.arriveDate = $filter('date')(regCtrl.data.arriveDate, 'yyyy-MM-dd HH:mm:ss Z');
-            console.log('regData', elacUser);
+
+            elacUser.alpha = regCtrl.selectedAlpha;
 
             regCtrl.loadingMessage = 'Registro en proceso';
             regCtrl.isLoading = true;
+
             RegService.saveElacUser(elacUser)
                 .then(registrationComplete)
                 .catch(registrationFail);
@@ -146,7 +148,9 @@
             };
 
             function initFace() {
-                Facebook.getUser().then(processLogin);
+                Facebook.getUser()
+                .then(processLogin)
+                .catch(errorLoading);
             }
 
             $rootScope.$on('faceInit', initFace);
@@ -158,7 +162,6 @@
         }
 
         function processLogin(user) {
-            console.log('login', user);
             regCtrl.user.image = '//graph.facebook.com/' + user.id + '/picture?type=large';
             regCtrl.data.firstName = user.first_name;
             regCtrl.data.lastName = user.last_name;

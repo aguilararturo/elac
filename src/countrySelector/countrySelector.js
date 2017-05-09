@@ -15,6 +15,7 @@
                 _.forEach(selCountryCtrl.countries, function search(country) {
                     if (country.alpha2 === countryName) {
                         selCountryCtrl.selectedCountry = country;
+                        selCountryCtrl.selectedAlpha = country.alpha2;
                         return;
                     }
                 });
@@ -31,6 +32,7 @@
         }
         function selectCountry(country) {
             selCountryCtrl.selectedCountry = country;
+            selCountryCtrl.selectedAlpha = country.alpha2;
         }
 
         selCountryCtrl.$onInit = $onInit;
@@ -39,7 +41,8 @@
 
     var countrySelector = {
         bindings: {
-            selectedCountry: '='
+            selectedCountry: '=',
+            selectedAlpha: '='
         },
         controller: SelectedCountryController,
         controllerAs: 'selCountryCtrl',
