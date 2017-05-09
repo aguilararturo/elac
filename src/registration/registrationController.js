@@ -118,7 +118,7 @@
                 },
                 {
                     selected: false,
-                    value: 'Dama Leo'
+                    value: 'Dama Leon'
                 }
             ];
 
