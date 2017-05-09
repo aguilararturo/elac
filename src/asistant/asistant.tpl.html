@@ -1,0 +1,15 @@
+<div class="container asistant-carousel">
+    <h2 class="heading">ASISTENTES REGISTRADOS</h2>
+    <div class="col-sm-12 col-md-9" uib-carousel active="asistantCtrl.active" interval="asistantCtrl.myInterval" no-wrap="asistantCtrl.noWrapSlides" hide-indicators="true">
+        <div uib-slide ng-repeat="slide in asistantCtrl.carouselItems track by slide.id" class="single-slide" index="slide.id">
+            <div class="col-sm-4" ng-repeat="participant in slide.rows">
+                <img class="img-thumbnail" src="{{participant.image}}" alt="event-image">
+                <h4>{{participant.firstName}}</h4>
+                <h5>{{participant.country}}</h5>
+                <h5>{{participant.type}}</h5>
+            </div>
+
+        </div>
+    </div>
+
+</div>

@@ -2,6 +2,9 @@
 @import "../node_modules/font-awesome/scss/font-awesome";
 @import "countrySelector/countrySelector";
 @import "registration/registration";
+@import "profile/profile";
+@import "hotel/hotel.scss";
+@import "asistant/asistant.scss";
 
 
 .no-padding {
@@ -427,7 +430,7 @@ h2 {
   background-color: #891819;
   background-image: url("../images/asistants-bg.png");
   background-position: 50% 0;
-  background-size: contain;
+  background-size: cover;
   position: relative;
   background-repeat: no-repeat;
 }

@@ -15,6 +15,8 @@
             var $state = $injector.get('$state');
             $state.go('home');
         });
+
+       // socialProvider.setFbKey({appId: "1849327175317576", apiVersion: "v2.8"});
     });
 
     /**
@@ -23,7 +25,8 @@
      * @author Arturo Aguilar
      * @desc Website Level Runtime Configurations
      */
-    elacApp.run(function ($rootScope, $window) {
+    elacApp.run(function ($rootScope, $window, Facebook) {
+         $rootScope.facebookInitialized = false;
         $rootScope.headerClass = '';
         $rootScope.contentClass = '';
         console.log('app is running');

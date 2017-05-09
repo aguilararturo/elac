@@ -46,18 +46,11 @@
     "gruntify-eslint": "^3.1.0",
     "world-flags-sprite": "0.0.2",
     "angular-country-picker": "^2.0.1",
-    "ng-country-flags": "^1.0.5"
-  },
-  "dependencies": {
-    "angular-aria": "^1.6.4",
-    "angular-countries": "^1.1.5",
-    "angular-material": "^1.1.4",
-    "angular-messages": "^1.6.4",
-    "angular-scroll": "^1.0.0",
+    "ng-country-flags": "^1.0.5",
     "bootstrap-timepicker": "^0.5.2",
+    "eslint-plugin-react": "^6.10.3",
     "humanize-duration": "^3.10.0",
     "jquery.scrollto": "^2.1.2",
-    "mdPickers": "^0.7.5",
     "smooth-scroll": "github:cferdinandi/smooth-scroll"
   }
 }

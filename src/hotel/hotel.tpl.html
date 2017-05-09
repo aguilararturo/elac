@@ -1,0 +1,13 @@
+<div class="hotel-container">
+  <div uib-carousel interval="hotelCtrl.myInterval" active="hotelCtrl.active" no-wrap="hotelCtrl.noWrapSlides">
+    <div uib-slide ng-repeat="slide in hotelCtrl.slides track by slide.id" index="slide.id">
+      <img ng-src="{{slide.image}}" class="img-responsive hotel-img">
+      <div class="carousel-caption">
+        <h3 class="hotel-title hidden-xs">{{slide.title}}</h3>
+        <a class="hotel-link hidden-xs" href="http://{{hotelCtrl.url}}">{{hotelCtrl.url}}</a>
+        <br>
+      </div>
+    </div>
+  </div>
+  <a class="hotel-link visible-xs" href="http://{{hotelCtrl.url}}">{{hotelCtrl.url}}</a>
+</div>

@@ -46,24 +46,24 @@
             </div>
             <div class="col-sm-7 col-md-6">
                 <timer end-time="homeCtrl.endTime">
-                <ul id="countdown">
-                    <li>
-                        <span class="days time-font">{{days}}</span>
-                        <p>Dias </p>
-                    </li>
-                    <li>
-                        <span class="hours time-font">{{hours}}</span>
-                        <p class="">horas </p>
-                    </li>
-                    <li>
-                        <span class="minutes time-font">{{minutes}}</span>
-                        <p class="">Minutos </p>
-                    </li>
-                    <li>
-                        <span class="seconds time-font">{{seconds}}</span>
-                        <p class="">Segundos </p>
-                    </li>
-                </ul>
+                    <ul id="countdown">
+                        <li>
+                            <span class="days time-font">{{days}}</span>
+                            <p>Dias </p>
+                        </li>
+                        <li>
+                            <span class="hours time-font">{{hours}}</span>
+                            <p class="">horas </p>
+                        </li>
+                        <li>
+                            <span class="minutes time-font">{{minutes}}</span>
+                            <p class="">Minutos </p>
+                        </li>
+                        <li>
+                            <span class="seconds time-font">{{seconds}}</span>
+                            <p class="">Segundos </p>
+                        </li>
+                    </ul>
                 </timer>
             </div>
         </div>
@@ -75,69 +75,7 @@
 <!--/#explore-->
 
 <section id="event">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-9">
-                <div id="event-carousel" class="carousel slide" data-interval="false">
-                    <h2 class="heading">ASISTENTES REGISTRADOS</h2>
-                    <a class="even-control-left" href="#event-carousel" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-                    <a class="even-control-right" href="#event-carousel" data-slide="next"><i class="fa fa-angle-right"></i></a>
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="single-event">
-                                        <img class="img-responsive" src="images/event/event1.jpg" alt="event-image">
-                                        <h4>Chester Bennington</h4>
-                                        <h5>Vocal</h5>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="single-event">
-                                        <img class="img-responsive" src="images/event/event2.jpg" alt="event-image">
-                                        <h4>Mike Shinoda</h4>
-                                        <h5>vocals, rhythm guitar</h5>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="single-event">
-                                        <img class="img-responsive" src="images/event/event3.jpg" alt="event-image">
-                                        <h4>Rob Bourdon</h4>
-                                        <h5>drums</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="single-event">
-                                        <img class="img-responsive" src="images/event/event1.jpg" alt="event-image">
-                                        <h4>Chester Bennington</h4>
-                                        <h5>Vocal</h5>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="single-event">
-                                        <img class="img-responsive" src="images/event/event2.jpg" alt="event-image">
-                                        <h4>Mike Shinoda</h4>
-                                        <h5>vocals, rhythm guitar</h5>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="single-event">
-                                        <img class="img-responsive" src="images/event/event3.jpg" alt="event-image">
-                                        <h4>Rob Bourdon</h4>
-                                        <h5>drums</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <asistant-section></asistant-section>
 </section>
 <!--/#event-->
 
@@ -156,19 +94,9 @@
     </div>
 </section>
 <!--/#about-->
-
 <section id="hotel">
-    <div id="twitter-feed" class="carousel slide" data-interval="false">
-        <div class="twit">
-            <img class="img-responsive" src="images/twit.png" alt="twit">
-        </div>
-        <div class="row">
-
-        </div>
-    </div>
+    <hotel-section> </hotel-section>
 </section>
-<!--/#twitter-feed-->
-
 <section id="sponsor">
     <div id="sponsor-carousel" class="carousel slide" data-interval="false">
         <div class="container">
@@ -234,12 +162,6 @@
 <!--/#sponsor-->
 
 <section id="contact">
-    <div id="map">
-        <div id="gmap-wrap">
-            <div id="gmap">
-            </div>
-        </div>
-    </div>
     <!--/#map-->
     <div class="contact-section">
         <div class="ear-piece">

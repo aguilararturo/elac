@@ -1,0 +1,12 @@
+<div class="row profile-content">
+    <div class="col-xs-12 row">
+        <img src="{{profileCtrl.user.image}}" alt="" class="img-thumbnail">
+    </div>
+    <div class="" ng-if="!profileCtrl.isLogged">
+        <span class="col-xs-12 log-title">Para continuar ingresa con tu cuenta de:</span>
+        <button class="col-xs-12 btn-face" ng-click="profileCtrl.action()()">
+            <i class="fa fa-facebook-official log-icon"></i><span class="log-text">facebook</span></button>
+    </div>
+
+   <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div>
+</div>

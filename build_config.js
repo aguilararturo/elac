@@ -56,7 +56,7 @@ module.exports = {
 			'node_modules/humanize-duration/humanize-duration.js',
 			'node_modules/angular-timer/dist/angular-timer.min.js',
 			'node_modules/angular-aria/angular-aria.js',
-			'node_modules/angular-messages/angular-messages.min.js',
+			'node_modules/angular-messages/angular-messages.min.js'
         ],
         styles: [
 			'node_modules/bootstrap/dist/js/ui-bootstrap-csp.css',
