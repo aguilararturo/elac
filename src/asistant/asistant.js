@@ -17,7 +17,7 @@
                     id: id
                 };
             }
-            asistantCtrl.carouselItems = _.map(_.chunk(_.map(response, addImage), 3), addIds);
+            asistantCtrl.carouselItems = _.map(_.chunk(_.orderBy(_.map(response, addImage),'regDate','desc'), 3), addIds);
         }
 
         function $onInit() {
