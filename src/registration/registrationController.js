@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-/* @ngInject */
+    /* @ngInject */
     function RegistrationController($rootScope, $state, _, Facebook, $window, RegService, $filter) {
         var regCtrl = this;
 
@@ -97,7 +97,7 @@
             regCtrl.selectedCountry = {};
             regCtrl.data = {};
 
-            regCtrl.data.arriveDate =  new Date('2017-08-09 09:00:00 -0400');
+            regCtrl.data.arriveDate = new Date('2017-08-09 09:00:00 -0400');
             regCtrl.data.departureDate = new Date('2017-08-13 12:00:00 -0400');
 
             regCtrl.dateOptions = {
@@ -119,7 +119,16 @@
                 {
                     selected: false,
                     value: 'Dama Leon'
+                },
+                {
+                    selected: false,
+                    value: 'Invitado'
+                },
+                {
+                    selected: false,
+                    value: 'Niño'
                 }
+
             ];
 
             regCtrl.tallas = [
@@ -149,8 +158,8 @@
 
             function initFace() {
                 Facebook.getUser()
-                .then(processLogin)
-                .catch(errorLoading);
+                    .then(processLogin)
+                    .catch(errorLoading);
             }
 
             $rootScope.$on('faceInit', initFace);
