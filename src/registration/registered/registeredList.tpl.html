@@ -1,0 +1,23 @@
+<div class="table-responsive table-condensed">
+    <table class="table">
+        <tr>
+            <th ng-repeat="header in regListCtrl.headers">
+                <button class="force-no-padding btn btn-link btn-header" ng-click="regListCtrl.sortBy(header)">
+                <span ng-bind="header.title"></span>
+                    <i class="fa fa-sort"></i>
+                </button>
+            </th>
+        </tr>
+        <tr ng-repeat="user in regListCtrl.users">
+            <td>{{$index+1}}</td>
+            <td>{{user.firstName}} {{user.lastName}}</td>
+            <td>{{user.country}}</td>
+            <td>{{user.type}}</td>
+            <td>{{user.shirt}}</td>
+            <td>{{user.arriveDate | date : 'MMM d - h:mm a'}}</td>
+            <td>{{user.arriveCompany}} : {{user.arrivefligth}}</td>
+            <td>{{user.departureDate | date : 'MMM d - h:mm a'}}</td>
+            <td>{{user.departureCompany}} : {{user.departurefligth}}</td>
+        </tr>
+    </table>
+</div>
