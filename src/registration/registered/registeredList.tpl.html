@@ -1,14 +1,14 @@
-<div class="table-responsive table-condensed">
+<div class="registert-table table-responsive table-condensed">
     <table class="table">
         <tr>
             <th ng-repeat="header in regListCtrl.headers">
-                <button class="force-no-padding btn btn-link btn-header" ng-click="regListCtrl.sortBy(header)">
+                <button class="force-no-padding btn btn-link btn-header" ng-click="regListCtrl.orderBy(header)">
                 <span ng-bind="header.title"></span>
-                    <i class="fa fa-sort"></i>
+                    <i class="fa fa-sort"></i>                    
                 </button>
             </th>
         </tr>
-        <tr ng-repeat="user in regListCtrl.users">
+        <tr ng-repeat="user in regListCtrl.users  | orderBy:regListCtrl.orderByField ">
             <td>{{$index+1}}</td>
             <td>{{user.firstName}} {{user.lastName}}</td>
             <td>{{user.country}}</td>
