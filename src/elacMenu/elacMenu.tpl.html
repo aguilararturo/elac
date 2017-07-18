@@ -30,7 +30,7 @@
             </div>
             <div class="collapse navbar-collapse" id="naviBar">
                 <ul class="nav navbar-nav navbar-right custom-navbar">
-                    <li class="scroll {{elacMenuCtrl.selectItem.name === item.name ? 'active': ''}}" ng-repeat="item in elacMenuCtrl.items"><a href="{{item.href}}" ng-click="elacMenuCtrl.onClickMenu(item)">{{item.name}}</a></li>
+                    <li class="nav-item {{elacMenuCtrl.selectItem.name === item.name ? 'active': ''}}" ng-repeat="item in elacMenuCtrl.items"><a href="{{item.href}}" ng-click="elacMenuCtrl.onClickMenu(item)">{{item.name}}</a></li>
                 </ul>
             </div>
         </div>
